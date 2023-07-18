@@ -13,14 +13,6 @@ services:
     volumes:
       - db:/var/lib/postgresql/data
 
-  api:
-    image: node:18.16.1
-    volumes:
-      - ./:/app
-    ports:
-      - '3000:3000'
-    command: ['tail', '-f', '/dev/null']
-
 volumes:
   db:
     driver: local

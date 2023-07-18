@@ -28,4 +28,9 @@ model Follower {
 }
 
 model Message {
+  user_id   Int
+  content   String
+  published Boolean @default(false)
+
+  @@id([user_id])
 }
